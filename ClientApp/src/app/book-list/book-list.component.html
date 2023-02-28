@@ -1,0 +1,21 @@
+<div class="container">
+  <edit-book [book]="formBook"></edit-book>
+  <div class="form-gap">
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary active">
+        <input type="radio" name="options" id="option1" autocomplete="off" checked (click)="CheckAll($event)"> All
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option2" autocomplete="off" (click)="CheckRecommended($event)"> Recommended
+      </label>
+    </div>
+  </div>
+  <div class="table-wrapper-scroll-y scrollbar">
+    <div class="card-data">
+      <div *ngFor="let book of books" class="card">
+        <book-list-item (outBook)="getBook($event)" class="inrow" [book]="book">
+        </book-list-item>
+      </div>
+    </div>
+  </div>
+</div>

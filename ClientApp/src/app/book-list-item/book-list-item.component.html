@@ -1,0 +1,11 @@
+<div class="img-gap">
+  <img src={{book.cover}} height="80" width="80" />
+</div>
+<div class="title-pos">{{book.title}}</div>
+<div class="author-pos">{{book.author}}</div>
+<div class="gap">Reviews:{{book.reviewsNumber}}</div>
+<div class="gap">Rating:{{book.rating}}</div>
+<button class= "item-button btn btn-outline-dark">Info</button>
+<button (click)="passBook()" class="item-button btn btn-outline-dark">Edit</button>
+
+

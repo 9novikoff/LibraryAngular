@@ -1,0 +1,26 @@
+<form [formGroup]="bookForm">
+  <div class="form-group">
+    <label>Title:</label>
+    <input type="text" class="form-control" formControlName="title" />
+  </div>
+  <div class="form-group">
+    <label>Cover:</label>
+    <input type="text" class="form-control" formControlName="cover" />
+  </div>
+  <div class="form-group">
+    <label>Author:</label>
+    <input type="text" class="form-control" formControlName="author" />
+  </div>
+  <div class="form-group">
+    <label>Genre:</label>
+    <input type="text" class="form-control" formControlName="genre" />
+  </div>
+  <div class="form-group">
+    <label>Content:</label>
+    <textarea class="form-control" formControlName="content" rows="5"> </textarea>
+  </div>
+  <button type="submit" class="btn btn-dark" (click)="getFormBook()">Add</button>
+  <button type="submit" class="btn btn-dark" (click)="clearFormBook()">Clear</button>
+</form>
+
+

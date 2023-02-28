@@ -1,0 +1,85 @@
+a {
+  color: #0366d6;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.scrollbar {
+  position: relative;
+  height: 250px;
+  overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+  display: block;
+}
+
+.card-data {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 45%;
+  height: 100px;
+  line-height: 100px;
+  background-color: grey;
+  margin: 10px;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.inrow {
+  display: flex;
+}
+
+.gap {
+  margin-left: 20px;
+}
+
+.title-pos {
+  margin-left: 10px;
+  margin-top: -20px;
+  font-weight: bold;
+}
+
+.author-pos {
+  margin-left: -95px;
+  margin-top: 20px;
+}
+
+.title-author {
+  float: left;
+}
+
+.item-button {
+  margin-top: 5px;
+  margin-left: 10px;
+  height: 50px;
+  width: 50px;
+  font-size: 10px;
+}
+
+.img-gap {
+  margin-left: 5px;
+  margin-top: -2px;
+}
+
+.form-gap {
+  margin-top: 10px; 
+}
