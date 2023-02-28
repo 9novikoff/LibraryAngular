@@ -41,9 +41,17 @@ export class EditBookComponent {
 
   public getFormBook() {
     if (this.book !== undefined) {
-      this.libraryService.postBook(this.book);
-      this.clearFormBook();
     }
+
+    this.book.title = this.bookForm.controls['title'].value;
+    this.book.cover = this.bookForm.controls['cover'].value;
+    this.book.author = this.bookForm.controls['author'].value;
+    this.book.genre = this.bookForm.controls['genre'].value;
+    this.book.content = this.bookForm.controls['content'].value;
+
+    this.libraryService.postBook(this.book);
+    this.clearFormBook();
+    this.book = undefined;
   }
 
   public clearFormBook() {

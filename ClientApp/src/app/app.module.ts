@@ -6,9 +6,7 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
-import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { BooksPageComponent } from './books-page/books-page.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { BookListItemComponent } from './book-list-item/book-list-item.component';
@@ -18,9 +16,7 @@ import { EditBookComponent } from './edit-book/edit-book.component';
   declarations: [
     AppComponent,
     NavMenuComponent,
-    HomeComponent,
     CounterComponent,
-    FetchDataComponent,
     BooksPageComponent,
     BookListComponent,
     BookListItemComponent,
@@ -32,10 +28,6 @@ import { EditBookComponent } from './edit-book/edit-book.component';
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
-      { path: 'library', component: BooksPageComponent }
     ])
   ],
   providers: [],
