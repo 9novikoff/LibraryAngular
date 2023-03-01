@@ -21,8 +21,8 @@ namespace LibraryAngular.Backend.Controllers
             return _service.GetAllBooks();
         }
 
-        [HttpPost("save")]
-        public IActionResult Save(Book book)
+        [HttpPost]
+        public IActionResult Save(Book? book)
         {
             if (book == null)
                 return NotFound();

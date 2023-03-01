@@ -1,4 +1,4 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Inject, Injectable } from '@angular/core';
 import { Observable } from "rxjs";
 import { AppModule } from "../app.module";
@@ -21,6 +21,6 @@ export class LibraryService {
   }
 
   postBook(book: Book) {
-    this.http.post<Book>(this.baseUrl + 'api/books/save', book)
+    return this.http.post<Book>(this.baseUrl + 'api/books', book).subscribe();
   }
 }

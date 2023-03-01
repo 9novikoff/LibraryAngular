@@ -41,15 +41,27 @@ export class EditBookComponent {
 
   public getFormBook() {
     if (this.book !== undefined) {
+      this.book.title = this.bookForm.controls['title'].value;
+      this.book.cover = this.bookForm.controls['cover'].value;
+      this.book.author = this.bookForm.controls['author'].value;
+      this.book.genre = this.bookForm.controls['genre'].value;
+      this.book.content = this.bookForm.controls['content'].value;
+
+      this.libraryService.postBook(this.book);
     }
+    else {
+      const formBook = {
+        title: this.bookForm.controls['title'].value,
+        cover: this.bookForm.controls['cover'].value,
+        author: this.bookForm.controls['author'].value,
+        genre: this.bookForm.controls['genre'].value,
+        content: this.bookForm.controls['content'].value
+      }
 
-    this.book.title = this.bookForm.controls['title'].value;
-    this.book.cover = this.bookForm.controls['cover'].value;
-    this.book.author = this.bookForm.controls['author'].value;
-    this.book.genre = this.bookForm.controls['genre'].value;
-    this.book.content = this.bookForm.controls['content'].value;
+      const toPost = formBook as Book;
 
-    this.libraryService.postBook(this.book);
+      this.libraryService.postBook(toPost);
+    }
     this.clearFormBook();
     this.book = undefined;
   }
